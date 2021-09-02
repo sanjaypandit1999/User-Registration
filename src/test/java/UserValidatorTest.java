@@ -23,4 +23,11 @@ public class UserValidatorTest {
         boolean result = email.validEmail("abc.xyz@bl.co.in");
         Assertions.assertTrue(result);
     }
+
+    @Test
+    public void givePhnNo_WhenValid_ShouldReturnTrue() {
+        UserRegistration phnNo =new UserRegistration();
+        boolean result = phnNo.validPhnNo("91 8167203013");
+        Assertions.assertTrue(result);
+    }
 }
