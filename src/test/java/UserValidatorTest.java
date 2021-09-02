@@ -30,4 +30,11 @@ public class UserValidatorTest {
         boolean result = phnNo.validPhnNo("91 8167203013");
         Assertions.assertTrue(result);
     }
+
+    @Test
+    public void givenPassWord_WhenValid_ShouldReturnTrue() {
+        UserRegistration pass = new UserRegistration();
+        boolean result = pass.validPassWord("sanJU123");
+        Assertions.assertTrue(result);
+    }
 }
