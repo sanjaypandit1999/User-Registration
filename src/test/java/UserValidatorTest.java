@@ -34,7 +34,7 @@ public class UserValidatorTest {
     @Test
     public void givenPassWord_WhenValid_ShouldReturnTrue() {
         UserRegistration pass = new UserRegistration();
-        boolean result = pass.validPassWord("sanJU123");
+        boolean result = pass.validPassWord("Sanju123");
         Assertions.assertTrue(result);
     }
 }
