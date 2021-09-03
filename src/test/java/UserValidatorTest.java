@@ -20,7 +20,7 @@ public class UserValidatorTest {
     @Test
     public void givenEmail_WhenProper_ShouldReturnTrue() {
         UserRegistration email = new UserRegistration();
-        boolean result = email.validEmail("abc.xyz@bl.co.in");
+        boolean result = email.validEmail("abc-100@yahoo.com");
         Assertions.assertTrue(result);
     }
 
