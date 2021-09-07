@@ -6,7 +6,7 @@ public class UserValidatorTest {
     @Test
     public  void givenFirstName_WhenProper_ShouldReturnTrue() {
         UserRegistration valid = new UserRegistration();
-        boolean result = valid.validFirstName("San");
+        boolean result = valid.validFirstName("Sanju");
         Assertions.assertTrue(result);
     }
 
@@ -36,5 +36,20 @@ public class UserValidatorTest {
         UserRegistration pass = new UserRegistration();
         boolean result = pass.validPassWord("San%3145");
         Assertions.assertTrue(result);
+    }
+    @Test
+    void givenDetails_WhenProper_ShouldReturnHAPPY() {
+        UserRegistration validator = new UserRegistration();
+        String result = validator.validatedUserRegistration("Sanju","Pan","abc-100@yahoo.com",
+                "91 8167203013","San%3145");
+        Assertions.assertEquals("HAPPY",result);
+    }
+
+    @Test
+    void givenDetails_WhenImproper_ShouldReturnSAD() {
+        UserRegistration validator = new UserRegistration();
+        String result = validator.validatedUserRegistration("Sa","pandit","abc@gmail.co",
+                "91 5451122610","@how6AreYou");
+        Assertions.assertEquals("SAD",result);
     }
 }
